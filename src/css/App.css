@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+body {
+  font-family: 'Lobster', cursive; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+.styleh1 {
+  text-decoration: underline; }
+
+.navBar {
+  background-color: #cfaf9a; }
+  .navBar-img {
+    height: 5rem;
+    margin: 0 0.5rem; }
+    @media screen and (max-width: 425px) {
+      .navBar-img {
+        display: none; } }
+  .navBar-size {
+    color: black;
+    font-family: "Lobster", cursive;
+    margin: 0; }
+  .navBar-icons {
+    margin: 0rem 1rem; }
+
+.nav-link_icons {
+  color: black;
+  margin: 0 1rem; }
+
+.card {
+  height: 30rem;
+  margin: 1rem 2rem;
+  display: flex;
+  max-width: 18rem; }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  .card-content {
+    margin: 0.5rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+
+.card-detail {
+  display: flex;
+  justify-content: center;
+  width: 75vw;
+  margin: 1rem 0rem; }
+  @media screen and (max-width: 1024px) {
+    .card-detail {
+      width: 100%; } }
+  .card-detail-img {
+    height: 30rem;
+    display: flex;
+    justify-content: center; }
+    @media screen and (max-width: 576px) {
+      .card-detail-img {
+        height: 15rem; } }
+  .card-detail-info {
+    width: 65%;
+    margin: 3rem 0rem;
+    padding: 1rem 1rem; }
+    .card-detail-info h4 {
+      display: inline;
+      background-color: #fff2e9;
+      border-radius: 5%;
+      padding: 0.5rem; }
+    .card-detail-info p {
+      background-color: #fff2e9;
+      padding: 1rem;
+      border: 1px;
+      border-style: solid;
+      border-color: #f7c7a5;
+      border-radius: 1%; }
+    @media screen and (max-width: 768px) {
+      .card-detail-info {
+        width: 100%; } }
+  .card-detail-traid {
+    width: 100%; }
+    .card-detail-traid .btn {
+      margin: 1rem; }
+  .card-detail-cart {
+    background-color: #fff2e9;
+    border-radius: 3%; }
+
+.conteiner-trolley {
+  background: #cdcdcd;
+  background: -moz-radial-gradient(circle, #cdcdcd 11%, #dec4b1 75%, #c2c2c2 100%);
+  background: -webkit-radial-gradient(circle, #cdcdcd 11%, #dec4b1 75%, #c2c2c2 100%);
+  background: radial-gradient(circle, #cdcdcd 11%, #dec4b1 75%, #c2c2c2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cdcdcd", endColorstr="#c2c2c2", GradientType=1); }
+  .conteiner-trolley-style {
+    background-color: white;
+    width: 75vw;
+    min-height: 50rem;
+    box-sizing: border-box;
+    margin: 1rem;
+    padding: 2rem; }
+  .conteiner-trolley-list {
+    margin: 1rem 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    @media screen and (max-width: 1440px) {
+      .conteiner-trolley-list {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; } }
+
+.card-cost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0rem;
+  width: 30vw; }
+  @media screen and (max-width: 768px) {
+    .card-cost {
+      width: 50vw; } }
+  @media screen and (max-width: 1024px) {
+    .card-cost {
+      width: 60vw; } }
+  .card-cost-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; }
+  .card-cost-btn {
+    width: 75%;
+    display: flex;
+    justify-content: space-around; }
+    @media screen and (max-width: 500px) {
+      .card-cost-btn {
+        flex-direction: column;
+        width: 100%; } }
+
+.card-trolley {
+  background: white;
+  background: -moz-linear-gradient(156deg, white 0%, #ffe4d2 49%);
+  background: -webkit-linear-gradient(156deg, white 0%, #ffe4d2 49%);
+  background: linear-gradient(156deg, white 0%, #ffe4d2 49%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffe4d2",GradientType=1);
+  max-height: 20rem;
+  width: 45vw;
+  border-color: black;
+  border: 1px;
+  border-style: solid;
+  border-radius: 1%;
+  margin: 0.5rem; }
+  @media screen and (max-width: 576px) {
+    .card-trolley {
+      width: 60vw; } }
+  @media screen and (max-width: 768px) {
+    .card-trolley {
+      box-sizing: border-box;
+      padding: 0.5rem;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center; } }
+  @media screen and (max-width: 1440px) {
+    .card-trolley {
+      width: 100%; } }
+  .card-trolley-img {
+    height: 25rem; }
+  @media screen and (max-width: 768px) {
+    .card-trolley img {
+      width: 10rem; } }
+  @media screen and (max-width: 576px) {
+    .card-trolley-description {
+      display: none; } }
+  .card-trolley-info {
+    width: 100%; }
+    @media screen and (max-width: 768px) {
+      .card-trolley-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center; } }
+  .card-trolley-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
+  .card-trolley p {
+    margin: 0; }
