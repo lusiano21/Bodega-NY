@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 body {
-  font-family: 'Lobster', cursive; }
+  font-family: 'Lobster', cursive;
+  background: #f8dac6;
+  background: -moz-linear-gradient(180deg, #f8dac6 0%, #feeadd 0%, white 100%);
+  background: -webkit-linear-gradient(180deg, #f8dac6 0%, #feeadd 0%, white 100%);
+  background: linear-gradient(180deg, #f8dac6 0%, #feeadd 0%, white 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f8dac6", endColorstr="#ffffff", GradientType=1); }
 
 a {
   text-decoration: none;
@@ -18,9 +23,23 @@ a {
       .navBar-img {
         display: none; } }
   .navBar-size {
-    color: black;
-    font-family: "Lobster", cursive;
-    margin: 0; }
+    margin: 0;
+    position: relative;
+    padding: 1rem 1rem;
+    border-radius: 5%;
+    transition: all 200ms ease; }
+    .navBar-size::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 15%;
+      width: 100%;
+      background-color: #c39475;
+      opacity: 0;
+      transition: all 200ms ease; }
+    .navBar-size:hover::before {
+      opacity: 1; }
   .navBar-icons {
     margin: 0rem 1rem; }
 
@@ -28,21 +47,36 @@ a {
   color: black;
   margin: 0 1rem; }
 
+.box-search {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0px; }
+
 .card {
   height: 30rem;
   margin: 1rem 2rem;
   display: flex;
-  max-width: 18rem; }
+  max-width: 18rem;
+  background: #f8dac6;
+  background: -moz-linear-gradient(170deg, #f8dac6 58%, white 58%);
+  background: -webkit-linear-gradient(170deg, #f8dac6 58%, white 58%);
+  background: linear-gradient(170deg, #f8dac6 58%, white 58%); }
   .card-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
+  .card-img {
+    transform: scale(1, 1);
+    transition: all 1s ease; }
   .card-content {
     margin: 0.5rem 0;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center; }
+
+.card-img:hover {
+  transform: scale(1.1, 1.1); }
 
 .card-detail {
   display: flex;
@@ -52,10 +86,15 @@ a {
   @media screen and (max-width: 1024px) {
     .card-detail {
       width: 100%; } }
-  .card-detail-img {
-    height: 30rem;
+  .card-detail-box li {
     display: flex;
-    justify-content: center; }
+    flex-direction: column;
+    align-items: center; }
+  .card-detail-img {
+    height: 30rem; }
+    @media screen and (max-width: 768px) {
+      .card-detail-img {
+        height: 20rem; } }
     @media screen and (max-width: 576px) {
       .card-detail-img {
         height: 15rem; } }
@@ -141,7 +180,7 @@ a {
   background: -moz-linear-gradient(156deg, white 0%, #ffe4d2 49%);
   background: -webkit-linear-gradient(156deg, white 0%, #ffe4d2 49%);
   background: linear-gradient(156deg, white 0%, #ffe4d2 49%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffe4d2",GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffe4d2", GradientType=1);
   max-height: 20rem;
   width: 45vw;
   border-color: black;

@@ -7,7 +7,7 @@ import { Button } from "@mui/material";
 import { Detail } from "./Animations";
 
 
-const CartsDetail =({item}) => { 
+const CartsDetail = ({ item }) => {
     const [itemCount, setItemCount] = useState(0);
     const { addToTrolley } = useContext(Trolleycontext)
     const addItem = (qty) => {
@@ -17,34 +17,54 @@ const CartsDetail =({item}) => {
     }
     return (
         <>
-        {
-        item && item.img
-        ?
-        <div className="card-detail row">
-            <div className="col-sm-6 col-12 card-detail-img">
-            <img src={item.img} alt="licores" />
-            </div>
-            <div className="col-sm-6 col-12 card-detail-cart d-flex flex-column align-items-center justify-content-around">
-                <h1 className="card-title">{item.nombre}</h1>
-                <p className="card-text">{item.description}</p>
-                <h2 className="card-text">${item.precio}</h2>
-                
-                <p className="card-text">Unidades: {item.stock}</p>
-                <div className='card-detail-traid'>
-                    {
-                    itemCount ===0
-                    ?<ItemTrading stock={item.stock} initial={itemCount} addItem={addItem} />
-                    : <Link to= '/trolley' ><Button variant="outlined" startIcon={< TiShoppingCart/>}><span> Ver Carrito </span></Button></Link>
-                    }
-                </div>
-            </div> 
-            <div className="card-detail-info">
-            <h4>Informacio:</h4>
-            <p className="card-text">{item.info}</p>
-            </div>
-        </div>
-        :<Detail/>
-    }
+            {
+                item && item.img
+                    ?
+                    <div className="card-detail row">
+                        <div className="col-sm-6 col-12 card-detail-img carousel slide" id="carouselExampleControls" data-bs-ride="carousel">
+                                <div className="carousel-inner">
+                                    <div className="carousel-item card-detail-box active ">
+                                        <li>
+                                        <img className="card-detail-img" src={item.img[0]}  alt="..."/>
+                                        </li>
+                                    </div>
+                                    <div class="carousel-item card-detail-box">
+                                        <li>
+                                        <img className="card-detail-img" src={item.img[1]}  alt="..."/>
+                                        </li>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+
+                        </div>
+                        <div className="col-sm-6 col-12 card-detail-cart d-flex flex-column align-items-center justify-content-around">
+                            <h1 className="card-title">{item.nombre}</h1>
+                            <p className="card-text">{item.description}</p>
+                            <h2 className="card-text">${item.precio}</h2>
+
+                            <p className="card-text">Unidades: {item.stock}</p>
+                            <div className='card-detail-traid'>
+                                {
+                                    itemCount === 0
+                                        ? <ItemTrading stock={item.stock} initial={itemCount} addItem={addItem} />
+                                        : <Link to='/trolley' ><Button variant="outlined" startIcon={< TiShoppingCart />}><span> Ver Carrito </span></Button></Link>
+                                }
+                            </div>
+                        </div>
+                        <div className="card-detail-info">
+                            <h4>Informacio:</h4>
+                            <p className="card-text">{item.info}</p>
+                        </div>
+                    </div>
+                    : <Detail />
+            }
         </>
     );
 }

@@ -12,7 +12,7 @@ const Cart = ({id,img, nombre, rate, precio}) => {
     return (
         <div className="card">
             <div className="card-body">
-            <img src={img} className="card-img" alt="licores" />
+            <img src={img[0]} className="card-img" alt="licores" />
             <div className="d-flex flex-column align-items-center">
                 <h5 className="card-title">{nombre}</h5>
                 <div className='card-content'>
@@ -20,7 +20,7 @@ const Cart = ({id,img, nombre, rate, precio}) => {
                 <span className="card-text">${precio}</span>
                 </div>
                 <div className='card-content'>
-                <Link to={`/producto/${id}`}><Button variant="contained" startIcon={<TiShoppingCart />} className="btn btn-outline-info d-flex align-items-center"><span> Agregar </span></Button></Link>
+                <Link to={`/producto/${id}`}><Button variant="contained" startIcon={<TiShoppingCart />}><span> Agregar </span></Button></Link>
                 </div>
             </div>    
             </div>

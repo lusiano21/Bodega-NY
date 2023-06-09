@@ -70,21 +70,19 @@ const ButtonAppBar = () => {
             >
               {pages.map((page) => (
                 <div key={page} onClick={handleCloseNavMenu}>
-                  <Button>{page}</Button>
+                  <Button><Link to={`/categoria/${page}`}>{page}</Link></Button>
                 </div>
               ))}
             </Menu>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent:"space-around",alignItems:"center" } }}>
             {pages.map((page) => (
-              <Button
+              <h5 className="navBar-size"
               key={page}
               onClick={handleCloseNavMenu}
               >
-                <h6 className="navBar-size">
                 <Link to={`/categoria/${page}`}>{page}</Link>
-                </h6>         
-              </Button>
+              </h5>
             ))}
               <div className="d-flex align-items-center">
               <h2 className="navBar-icons"><Link to="/trolley"><AiOutlineUser/></Link></h2>
