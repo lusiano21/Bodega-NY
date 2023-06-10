@@ -30,7 +30,7 @@ const ButtonAppBar = () => {
       <AppBar position="static">
         <Toolbar className="navBar">
           <div className="d-flex align-items-center">
-            <Link to='/'><img className="navBar-img" src="/src/assets/bodega-icono.png" alt="" /></Link>
+            <Link to='/'><img className="navBar-img" src="https://res.cloudinary.com/dees2z2uf/image/upload/v1686358638/bodega-icono_c6wczl.png" alt="" /></Link>
             <Link to='/'><h3>Bodega NY</h3></Link>
           </div>
           

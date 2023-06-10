@@ -5,13 +5,20 @@ import { Link } from "react-router-dom";
 import { Trolleycontext } from "../contentComponents/Trolleycontext";
 import { Button } from "@mui/material";
 import { Detail } from "./Animations";
-
+import Toastify from 'toastify-js'
+import "toastify-js/src/toastify.css"
 
 const CartsDetail = ({ item }) => {
     const [itemCount, setItemCount] = useState(0);
     const { addToTrolley } = useContext(Trolleycontext)
     const addItem = (qty) => {
-        alert("You have selected " + qty + " items.");
+        Toastify({
+            text: `Agregaste ${item.nombre} al carrito`,
+            className: "info",
+            style: {
+              background: "#c39475",
+            }
+          }).showToast();
         setItemCount(qty);
         addToTrolley(item, qty)
     }

@@ -52,10 +52,10 @@ const Trolley = () => {
                     <article className="d-flex flex-column justify-content-center">
                         {
                             trolley.trolleyList.length === 0
-                                ? <img src="/src/assets/TrolleyVacio.png" className="img-fluid card-trolley-img" />
+                                ? <img src="https://res.cloudinary.com/dees2z2uf/image/upload/v1686358648/TrolleyVacio_e31aor.png" className="img-fluid card-trolley-img" />
                                 : trolley.trolleyList.map(item =>
                                     <div key={item.id} className="card-trolley row g-0" >
-                                        <img src={item.imagen} className="img-fluid col-12 col-md-3 col-lg-2 rounded-start" alt="..." />
+                                        <img src={item.imagen[0]} className="img-fluid col-12 col-md-3 col-lg-2 rounded-start" alt="..." />
                                         <div className="col-12 col-md-9 col-lg-10 d-flex justify-content-evenly">
                                             <div className="card-trolley-body">
                                                 <h5 className="card-title">{item.nombre}</h5>
