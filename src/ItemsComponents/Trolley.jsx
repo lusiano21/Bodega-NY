@@ -5,7 +5,8 @@ import { Button } from "@mui/material";
 import { FaTrashAlt } from 'react-icons/fa';
 import { collection, doc, increment, serverTimestamp, setDoc, updateDoc } from "firebase/firestore";
 import { db } from "../utils/baseDatos";
-
+import Toastify from 'toastify-js'
+import "toastify-js/src/toastify.css"
 
 const Trolley = () => {
     const trolley = useContext(Trolleycontext);
@@ -33,7 +34,13 @@ const Trolley = () => {
         }
         createOrderBaseDatos()
             .then(result => {
-                alert('Felicitaciones tu compra se a realizado con exito')
+                Toastify({
+                    text: `Muchas gracias por su compra.`,
+                    className: "info",
+                    style: {
+                      background: "#c39475",
+                    }
+                  }).showToast();
                 trolley.trolleyList.forEach(async (item) => {
                     const itemRef = doc(db, "productos", item.id);
                     await updateDoc(itemRef, {
@@ -52,7 +59,9 @@ const Trolley = () => {
                     <article className="d-flex flex-column justify-content-center">
                         {
                             trolley.trolleyList.length === 0
-                                ? <img src="https://res.cloudinary.com/dees2z2uf/image/upload/v1686358648/TrolleyVacio_e31aor.png" className="img-fluid card-trolley-img" />
+                                ? <div>
+                                    <h3>No tienes productos en el carrito</h3>
+                                    <img src="https://res.cloudinary.com/dees2z2uf/image/upload/v1686358648/TrolleyVacio_e31aor.png" className="img-fluid card-trolley-img" /></div>
                                 : trolley.trolleyList.map(item =>
                                     <div key={item.id} className="card-trolley row g-0" >
                                         <img src={item.imagen[0]} className="img-fluid col-12 col-md-3 col-lg-2 rounded-start" alt="..." />

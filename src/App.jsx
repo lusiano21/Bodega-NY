@@ -15,6 +15,7 @@ const App =() => {
     <ButtonAppBar />
     <Routes>
       <Route exact path='/' element={<CartListConteiner />} />
+      <Route exact path='/search/:idSearch' element={<CartListConteiner />} />
       <Route exact path='/categoria/:idCategory' element={<CartListConteiner />} />
       <Route exact path='/producto/:idProduct' element={<CartsDetailConteiner />} />
       <Route path='/trolley' element={<Trolley />} />

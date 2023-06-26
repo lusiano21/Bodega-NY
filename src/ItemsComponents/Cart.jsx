@@ -3,6 +3,7 @@ import { BsStar } from 'react-icons/bs'
 import { Link } from "react-router-dom"
 import { Button } from "@mui/material"
 import { TiShoppingCart } from 'react-icons/ti'
+
 const Cart = ({id,img, nombre, rate, precio}) => {
     const [start, setStars] = useState(rate);
     const sumarate = () => {

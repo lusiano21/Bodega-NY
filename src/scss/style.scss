@@ -267,6 +267,9 @@ a {
 
     &-img {
         height: 25rem;
+        @media screen and (max-width: 576px) {
+            height: 15rem;
+        }
     }
 
     img {

@@ -204,6 +204,9 @@ a {
       width: 100%; } }
   .card-trolley-img {
     height: 25rem; }
+    @media screen and (max-width: 576px) {
+      .card-trolley-img {
+        height: 15rem; } }
   @media screen and (max-width: 768px) {
     .card-trolley img {
       width: 10rem; } }
