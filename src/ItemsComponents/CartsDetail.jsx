@@ -30,14 +30,14 @@ const CartsDetail = ({ item }) => {
                     <div className="card-detail row">
                         <div className="col-sm-6 col-12 card-detail-img carousel slide" id="carouselExampleControls" data-bs-ride="carousel">
                                 <div className="carousel-inner">
-                                    <div className="carousel-item card-detail-box active ">
+                                    <div className="carousel-item card-detail-box active" data-bs-interval="4000">
                                         <li>
-                                        <img className="card-detail-img" src={item.img[0]}  alt="..."/>
+                                        <img className="card-detail-img" src={item.img[0]}  alt="producto"/>
                                         </li>
                                     </div>
-                                    <div className="carousel-item card-detail-box">
+                                    <div className="carousel-item card-detail-box" data-bs-interval="4000">
                                         <li>
-                                        <img className="card-detail-img" src={item.img[1]}  alt="..."/>
+                                        <img className="card-detail-img" src={item.img[1]}  alt="producto"/>
                                         </li>
                                     </div>
                                 </div>
